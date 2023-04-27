@@ -26,6 +26,7 @@ public class ArrayListDemo {
 				
 				System.out.println("complete Size of Collection-->" +list.size());
 				
+				
 				// add the element in colection 
 				
 				// Add 
