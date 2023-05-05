@@ -3,6 +3,7 @@
  */
 package com.kpmg.client;
 
+import com.kpmg.Exception.EmployeeNotUpdatedException;
 import com.kpmg.service.EmployeeService;
 
 /**
@@ -22,9 +23,16 @@ public class EmployeeClientApp {
 		EmployeeService service = new EmployeeService();
 		service.createEmployee();
 		service.deleteEmployee(101);
-		service.updateEmployee();
+		
+		
+		try {
+			service.updateEmployee(105);
+		} catch (EmployeeNotUpdatedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		service.listEmployee();
-
 	}
-
 }

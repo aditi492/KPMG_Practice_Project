@@ -46,9 +46,14 @@ public class ArrayListDemo {
 				list.remove("MALE");
 				
 				list.remove(3);
-				
+						
 				System.out.println("complete Size of  Collection after removal-->" +list.size());
 				
+				// Update the list 
+				
+				list.set(2, "Washington");
+				
+				System.out.println("List after updating --> " + list);
 				
 				// List of collection printing :--> 
 				

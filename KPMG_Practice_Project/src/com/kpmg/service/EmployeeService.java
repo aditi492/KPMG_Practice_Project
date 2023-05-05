@@ -3,6 +3,10 @@
  */
 package com.kpmg.service;
 
+import java.util.Iterator;
+
+import com.kpmg.Exception.EmployeeIdNotFoundException;
+import com.kpmg.Exception.EmployeeNotUpdatedException;
 import com.kpmg.bean.Employee;
 
 /**
@@ -13,9 +17,9 @@ public class EmployeeService {
 	
 	// All the service must be delcare here 
 	
-		// creation of custom array in this emplloyee code !
+		// creation of custom array in this employee code !
 		
-		Employee myEmployees[]=new Employee[] {new Employee(), new Employee(), new Employee()};
+		Employee myEmployees[]=new Employee[] {new Employee(), new Employee(), new Employee(), new Employee()};
 		
 		
 		// done
@@ -38,29 +42,47 @@ public class EmployeeService {
 			myEmployees[2].setEmpId(103);
 			myEmployees[2].setEmpName("komal");
 			myEmployees[2].setEmpAddress("Delhi");
+			
+			myEmployees[3].setEmpId(104);
+			myEmployees[3].setEmpName("Sonam");
+			myEmployees[3].setEmpAddress("Agra");
+			
+			
+			System.out.println("_________________________________________________________________");
 		
 		
 		}
 
 		
 		
-		public void deleteEmployee(int empID) {
+		public void deleteEmployee(int empID) {    
+			
 			
 			System.out.println("employee deleted here by id-->" +empID);
 			
+			System.out.println("_________________________________________________________________");
+			
 		}
 		
 		
-		public void updateEmployee() {
+		public void updateEmployee(int empID) throws EmployeeNotUpdatedException {
+				
+		
+			System.out.println("Employee list after updating -->");
+			for(Employee emp: myEmployees) {
+				
+				System.out.println("Employees Details with list-->" +emp.getEmpId() + "--" +emp.getEmpName() +"--" +emp.getEmpAddress() );
+			}
 			
-			
-			System.out.println("Employee is updated -->");
+			System.out.println("_________________________________________________________________");
 		}
+		
+		
 		
 		public void listEmployee() {
 			
 			
-			System.out.println("list of em[ployee here e-->");
+			System.out.println("list of emlployee here e-->");
 			
 			// morden Java loop for iterate the collection & Array object
 			
